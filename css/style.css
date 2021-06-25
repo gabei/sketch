@@ -48,6 +48,17 @@ _____________________________*/
   font-family: 'Cabin Sketch', cursive;
 }
 
+.settings_form-group {
+  display: flex;
+  align-items: center;
+}
+
+.settings_size {
+  line-height: 3rem;
+  outline: none;
+  padding: 0 .5rem;
+}
+
 .settings_form input[type="submit"] {
   background-color: var(--sketch-white);
   padding: 1rem;
@@ -60,8 +71,10 @@ _____________________________*/
 }
 
 .settings_form label {
-  display: block;
+  font-size: 3rem;
   color: var(--sketch-gold);
+  padding-right: 1rem;
+  text-shadow: 1px 1px 1px rgb(0 0 0 / 60%)
 }
 
 /* Utility 
