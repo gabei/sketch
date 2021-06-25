@@ -1,3 +1,9 @@
+/* Google Fonts
+_____________________________*/
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch&display=swap');
+
+/* Reset
+_____________________________*/
 html {
   box-sizing: border-box;
   font-size: 62.5%;
@@ -21,16 +27,67 @@ body {
 
 /* Container 
 _____________________________*/
-
 .sketch-container {
   width: 700px;
   height: 500px;
-  background-color: #DCDCDC;
+}
+
+/* Settings 
+_____________________________*/
+.settings {
+  width: 500px;
+  background-color: var(--sketch-red);
+  padding: 2rem;
+  border-radius: 5px;
+}
+
+.settings_form {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: 'Cabin Sketch', cursive;
+}
+
+.settings_form input[type="submit"] {
+  background-color: var(--sketch-white);
+  padding: 1rem;
+  border-radius: 50%;
+  width: 7rem;
+  height: 7rem;
+  border: 2px solid #eee;
+  box-shadow: 0px 0px 4px rgb(0 0 0 / 40%);
+  font-family: inherit;
+}
+
+.settings_form label {
+  display: block;
+  color: var(--sketch-gold);
+}
+
+/* Utility 
+_____________________________*/
+.absolute-center {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
 
-  border: 2rem solid #E30415;
+.hidden {
+  visibility: hidden;
+}
+
+.sketch-bg {
+  background-color: var(--sketch-gray);
+  border: 2rem solid var(--sketch-red);
   border-radius: 10px;
 }
+
+/* Colors 
+_____________________________*/
+:root {
+  --sketch-red: #E30415;
+  --sketch-gray: #BCB7B9 ;
+  --sketch-white: #ffffff;
+  --sketch-gold: #BE9249;
+} 

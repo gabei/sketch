@@ -10,13 +10,22 @@
 <body>
 
   <section class="main">
-    <div class="sketch-container">
-      
+    <div class="sketch-container absolute-center sketch-bg hidden">
+
     </div>
   </section>
 
-  <section class="settings">
-
+  <section class="settings absolute-center">
+    <form class="settings_form">
+      <div class="settings_form-group">
+        <label for="setting_size">Grid Size</label>
+        <input name="setting_size" type="text" class="setting_size">
+      </div>
+      <div class="settings_form-group">
+        <input type="submit" value="Sketch">
+      </div>
+    </form>
+    
   </section>
   
   <script src="/js/script.js"></script>
