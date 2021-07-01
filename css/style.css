@@ -28,8 +28,10 @@ body {
 /* Container 
 _____________________________*/
 .sketch-container {
-  width: 700px;
+  width: 500px;
   height: 500px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 /* Settings 
@@ -98,6 +100,12 @@ _____________________________*/
   background-color: var(--sketch-gray);
   border: 2rem solid var(--sketch-red);
   border-radius: 10px;
+}
+
+/* Pixels
+_____________________________*/
+.pixel {
+  background-color: blue;
 }
 
 /* Colors 
