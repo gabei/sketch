@@ -20,25 +20,36 @@ let pixelHeight;
 settings.addEventListener('submit', function(e){
   e.preventDefault();
 
-  let newGrid = settings.elements['settings_size'];
-  if (newGrid < 1 || newGrid > 100) {
-    alert('Choose a size between 1 and 100...');
-  } else {
-    setGridSize(newGrid.value);
-    pixelWidth = 100 / gridSize;
-    pixelHeight = pixelWidth;
+  let newGrid = settings.elements['settings_size'].value;
+  let formIsValid = validateSize(newGrid);
 
-    populateGrid();
-    addGridListeners();
-    toggleSettings();
-    toggleSketchContainer();
+
+  if(formIsValid){
+    init(newGrid);
+  } else {
+    formError();
   }
 });
 
 resetButton.addEventListener('click', reset);
 
-function getGridSize(event){
-  //condense above code into this
+function init(gridSize){
+  setGridSize(gridSize);
+  pixelWidth = 100 / gridSize;
+  pixelHeight = pixelWidth;
+
+  populateGrid();
+  addGridListeners();
+  toggleSettings();
+  toggleSketchContainer();
+}
+
+function formError(){
+  alert('Valust must be between 1 and 100!');
+}
+
+function validateSize(size){
+   return (size >= 1 && size <=100 )
 }
 
 function toggleSettings(){
