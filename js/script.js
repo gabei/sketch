@@ -10,6 +10,7 @@ const containerHeight = sketchContainer.offsetHeight;
 
 /* Setup Settings
 ___________________________________*/
+const settingsBox = document.querySelector('.settings');
 const settings = document.querySelector('.settings_form');
 let gridSize;
 let pixelWidth;
@@ -23,12 +24,16 @@ settings.addEventListener('submit', function(e){
   pixelWidth = 100 / gridSize;
   pixelHeight = pixelWidth;
 
-  console.log(gridSize);
   populateGrid();
+  toggleSettings();
 });
 
 function getGridSize(event){
   
+}
+
+function toggleSettings(){
+  settingsBox.classList.toggle('hidden');
 }
 
 function setGridSize(newValue) {

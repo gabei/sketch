@@ -108,6 +108,10 @@ _____________________________*/
   background-color: blue;
 }
 
+.pixel--filled {
+  background-color: black;
+}
+
 /* Colors 
 _____________________________*/
 :root {
