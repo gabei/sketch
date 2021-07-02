@@ -25,11 +25,12 @@ settings.addEventListener('submit', function(e){
   pixelHeight = pixelWidth;
 
   populateGrid();
+  addGridListeners();
   toggleSettings();
 });
 
 function getGridSize(event){
-  
+  //condense above code into this
 }
 
 function toggleSettings(){
@@ -63,4 +64,12 @@ function populateGrid(){
       attachPixel(newPixel);
     }
   }
+}
+
+function addGridListeners(){
+  sketchContainer.addEventListener('mouseover', function(e){
+    if (e.target.classList.contains('pixel')) {
+      e.target.classList.add('pixel--filled');
+    }
+  });
 }
