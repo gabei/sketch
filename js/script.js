@@ -20,7 +20,7 @@ settings.addEventListener('submit', function(e){
 
   let newGrid = settings.elements['settings_size'];
   setGridSize(newGrid.value);
-  pixelWidth = containerWidth / gridSize;
+  pixelWidth = 100 / gridSize;
   pixelHeight = pixelWidth;
 
   console.log(gridSize);
@@ -41,8 +41,8 @@ function createPixel() {
   //create a pixel of the sketch pad
   let pixel = document.createElement('div');
   pixel.setAttribute('class', 'pixel');
-  pixel.style.width = pixelWidth + 'px';
-  pixel.style.height = pixelHeight + 'px';
+  pixel.style.width = pixelWidth + '%';
+  pixel.style.height = pixelHeight + '%';
 
   return pixel;
 }
