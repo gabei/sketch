@@ -6,6 +6,7 @@ ___________________________________*/
 const sketchContainer = document.querySelector('.sketch-container');
 const containerWidth = sketchContainer.offsetWidth;
 const containerHeight = sketchContainer.offsetHeight;
+const resetButton = document.querySelector('.sketch-options__reset');
 
 
 /* Setup Settings
@@ -30,6 +31,8 @@ settings.addEventListener('submit', function(e){
   toggleSketchContainer();
 });
 
+resetButton.addEventListener('click', reset);
+
 function getGridSize(event){
   //condense above code into this
 }
@@ -44,6 +47,12 @@ function toggleSketchContainer(){
 
 function setGridSize(newValue) {
   gridSize = newValue;
+}
+
+function reset(){
+  toggleSketchContainer();
+  toggleSettings();
+  sketchContainer.textContent = '';
 }
 
 /* Pixel creation
