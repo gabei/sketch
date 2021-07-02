@@ -1,7 +1,7 @@
 console.log('script.js loaded...');
 
 
-/* Canvas Settings
+/* Sketch Elements
 ___________________________________*/
 const sketchContainer = document.querySelector('.sketch-container');
 const containerWidth = sketchContainer.offsetWidth;
@@ -9,7 +9,7 @@ const containerHeight = sketchContainer.offsetHeight;
 const resetButton = document.querySelector('.sketch-options__reset');
 
 
-/* Setup Settings
+/*Settings
 ___________________________________*/
 const settingsBox = document.querySelector('.settings');
 const settings = document.querySelector('.settings_form');
@@ -22,7 +22,6 @@ settings.addEventListener('submit', function(e){
 
   let newGrid = settings.elements['settings_size'].value;
   let formIsValid = validateSize(newGrid);
-
 
   if(formIsValid){
     init(newGrid);
