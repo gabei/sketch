@@ -20,8 +20,9 @@
   <section class="settings absolute-center">
     <form class="settings_form">
       <div class="settings_form-group">
-        <label for="settings_size">Grid Size</label>
-        <input name="settings_size" type="text" class="settings_size" placeholder="Limit 100...">
+        <label for="settings_size">Square Size <br>
+        <span>(limit 100)</span></label>
+        <input name="settings_size" type="number" min="1" max="100" class="settings_size" placeholder="Limit 100..." required>
       </div>
       <div class="settings_form-group">
         <input class="settings_button" type="submit" value="Sketch">

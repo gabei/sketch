@@ -21,14 +21,18 @@ settings.addEventListener('submit', function(e){
   e.preventDefault();
 
   let newGrid = settings.elements['settings_size'];
-  setGridSize(newGrid.value);
-  pixelWidth = 100 / gridSize;
-  pixelHeight = pixelWidth;
+  if (newGrid < 1 || newGrid > 100) {
+    alert('Choose a size between 1 and 100...');
+  } else {
+    setGridSize(newGrid.value);
+    pixelWidth = 100 / gridSize;
+    pixelHeight = pixelWidth;
 
-  populateGrid();
-  addGridListeners();
-  toggleSettings();
-  toggleSketchContainer();
+    populateGrid();
+    addGridListeners();
+    toggleSettings();
+    toggleSketchContainer();
+  }
 });
 
 resetButton.addEventListener('click', reset);
