@@ -27,6 +27,7 @@ settings.addEventListener('submit', function(e){
   populateGrid();
   addGridListeners();
   toggleSettings();
+  toggleSketchContainer();
 });
 
 function getGridSize(event){
@@ -35,6 +36,10 @@ function getGridSize(event){
 
 function toggleSettings(){
   settingsBox.classList.toggle('hidden');
+}
+
+function toggleSketchContainer(){
+  sketchContainer.classList.toggle('hidden');
 }
 
 function setGridSize(newValue) {

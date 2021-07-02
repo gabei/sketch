@@ -32,6 +32,9 @@ _____________________________*/
   height: 500px;
   display: flex;
   flex-wrap: wrap;
+  opacity: 1;
+  transition: 1s all;
+  transition-delay: .5s;
 }
 
 /* Settings 
@@ -41,6 +44,8 @@ _____________________________*/
   background-color: var(--sketch-red);
   padding: 2rem;
   border-radius: 5px;
+  opacity: 1;
+  transition: .5s all;
 }
 
 .settings_form {
@@ -94,6 +99,7 @@ _____________________________*/
 
 .hidden {
   visibility: hidden;
+  opacity: 0;
 }
 
 .sketch-bg {
