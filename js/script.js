@@ -44,7 +44,7 @@ function init(gridSize){
 }
 
 function formError(){
-  alert('Valust must be between 1 and 100!');
+  alert('Values must be between 1 and 100!');
 }
 
 function validateSize(size){
