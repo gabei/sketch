@@ -64,6 +64,7 @@ _____________________________*/
   line-height: 3rem;
   outline: none;
   padding: 0 .5rem;
+  width: 60px;
 }
 
 .settings_button {
